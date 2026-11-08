@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unadoor</title>
+<meta name="description" content="One door to your business. Coming soon.">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --ink: #1c2430;
+    --muted: #6b7484;
+    --accent: #b4552d;
+    --line: #e4ded2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141820;
+      --ink: #e8e4dc;
+      --muted: #8b93a3;
+      --accent: #d4764a;
+      --line: #2a3140;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  main { text-align: center; max-width: 34rem; }
+  .door {
+    width: 54px; height: 86px;
+    margin: 0 auto 2.2rem;
+    border: 2px solid var(--ink);
+    border-radius: 27px 27px 0 0;
+    position: relative;
+    opacity: .9;
+  }
+  .door::after {
+    content: "";
+    position: absolute;
+    right: 9px; top: 46px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  h1 {
+    font-size: clamp(2.2rem, 7vw, 3.4rem);
+    font-weight: 400;
+    letter-spacing: .14em;
+    text-transform: lowercase;
+  }
+  h1 b { font-weight: 400; color: var(--accent); }
+  .rule {
+    width: 56px; height: 1px;
+    background: var(--line);
+    margin: 1.6rem auto;
+  }
+  p.tag {
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: var(--muted);
+    font-style: italic;
+  }
+  p.soon {
+    margin-top: 2.6rem;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .78rem;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="door" aria-hidden="true"></div>
+  <h1>una<b>door</b></h1>
+  <div class="rule"></div>
+  <p class="tag">One door to your business.</p>
+  <p class="soon">Coming&nbsp;soon</p>
+</main>
+</body>
+</html>
